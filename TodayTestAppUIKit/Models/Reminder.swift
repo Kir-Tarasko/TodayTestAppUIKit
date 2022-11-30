@@ -17,9 +17,9 @@ struct Reminder {
 #if DEBUG
 extension Reminder {
     static var sampleData = [
-        Reminder(title: "Английскому язык", dueDate: Date().addingTimeInterval(2000), notes: "Изучение английского языка по приложению Duolingo"),
+        Reminder(title: "Английский язык", dueDate: Date().addingTimeInterval(2000), notes: "Изучение английского языка по приложению Duolingo"),
         Reminder(title: "Программирование", dueDate: Date().addingTimeInterval(10000), notes: "Изучение языка Swift"),
-        Reminder(title: "Португальскому язык", dueDate: Date().addingTimeInterval(20000), notes: "Изучение португальского языка по приложению Duolingo")
+        Reminder(title: "Португальский язык", dueDate: Date().addingTimeInterval(20000), notes: "Изучение португальского языка по приложению Duolingo")
     ]
 }
 #endif
