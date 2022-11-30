@@ -36,5 +36,4 @@ extension ReminderListViewController {
         button.setImage(image, for: .normal)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
     }
-    
 }
