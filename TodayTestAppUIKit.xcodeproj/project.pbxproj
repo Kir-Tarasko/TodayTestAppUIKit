@@ -20,6 +20,7 @@
 		95461155295EF93D00CCF534 /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95461154295EF93D00CCF534 /* TextFieldContentView.swift */; };
 		95461157295EF9BB00CCF534 /* UIContentConfiguration+Stateless.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95461156295EF9BB00CCF534 /* UIContentConfiguration+Stateless.swift */; };
 		95461159295EFC1400CCF534 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95461158295EFC1400CCF534 /* TextViewContentView.swift */; };
+		9546115E295F173300CCF534 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95461160295F173300CCF534 /* Localizable.strings */; };
 		9569A9ED2937C23E003CC009 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569A9EC2937C23E003CC009 /* Date+Today.swift */; };
 		9569A9F02937C9E3003CC009 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569A9EF2937C9E3003CC009 /* ReminderListViewController+DataSource.swift */; };
 		9573B491293FCCE900894821 /* ReminderDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573B490293FCCE900894821 /* ReminderDoneButton.swift */; };
@@ -46,6 +47,10 @@
 		95461154295EF93D00CCF534 /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
 		95461156295EF9BB00CCF534 /* UIContentConfiguration+Stateless.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentConfiguration+Stateless.swift"; sourceTree = "<group>"; };
 		95461158295EFC1400CCF534 /* TextViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
+		9546115A295F11B300CCF534 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		9546115B295F11B300CCF534 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9546115F295F173300CCF534 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95461161295F173800CCF534 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9569A9EC2937C23E003CC009 /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 		9569A9EF2937C9E3003CC009 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
 		9573B490293FCCE900894821 /* ReminderDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDoneButton.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 				95168A0C292D648F00008F1B /* Assets.xcassets */,
 				95168A0E292D648F00008F1B /* LaunchScreen.storyboard */,
 				95168A11292D648F00008F1B /* Info.plist */,
+				95461160295F173300CCF534 /* Localizable.strings */,
 			);
 			path = TodayTestAppUIKit;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 951689F7292D648D00008F1B;
 			productRefGroup = 95168A01292D648D00008F1B /* Products */;
@@ -203,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95168A10292D648F00008F1B /* LaunchScreen.storyboard in Resources */,
+				9546115E295F173300CCF534 /* Localizable.strings in Resources */,
 				95168A0D292D648F00008F1B /* Assets.xcassets in Resources */,
 				95168A0B292D648D00008F1B /* Main.storyboard in Resources */,
 			);
@@ -243,6 +251,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				95168A0A292D648D00008F1B /* Base */,
+				9546115A295F11B300CCF534 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -251,8 +260,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				95168A0F292D648F00008F1B /* Base */,
+				9546115B295F11B300CCF534 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		95461160295F173300CCF534 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9546115F295F173300CCF534 /* ru */,
+				95461161295F173800CCF534 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -322,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -388,6 +409,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +439,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

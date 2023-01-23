@@ -8,8 +8,6 @@
 import UIKit
 
 class ReminderListViewController: UICollectionViewController {
-    
-    
     var dataSource: DataSource!
     var reminders: [Reminder] = Reminder.sampleData
     
@@ -48,7 +46,4 @@ class ReminderListViewController: UICollectionViewController {
         listConfiguration.backgroundColor = .clear
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
-    
-    
 }
-
