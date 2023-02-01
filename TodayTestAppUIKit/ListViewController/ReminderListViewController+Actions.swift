@@ -10,7 +10,7 @@ import UIKit
 extension ReminderListViewController {
     @objc func didPressDoneButton(_ sender: ReminderDoneButton) {
         guard let id = sender.id else { return }
-        completeReminder(with: id)
+        completeReminder(withId: id)
     }
     
     @objc func didPressAddButton(_ sender: UIBarButtonItem) {

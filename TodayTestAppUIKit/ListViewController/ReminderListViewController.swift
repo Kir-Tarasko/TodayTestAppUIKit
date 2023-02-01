@@ -23,8 +23,10 @@ class ReminderListViewController: UICollectionViewController {
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didPressDoneButton(_:)))
-        addButton.accessibilityLabel = NSLocalizedString("Add reminder", comment: "Add button accessibility label")
+        let addButton = UIBarButtonItem(
+            barButtonSystemItem: .add, target: self, action: #selector(didPressAddButton(_:)))
+        addButton.accessibilityLabel = NSLocalizedString(
+            "Add reminder", comment: "Add button accessibility label")
         navigationItem.rightBarButtonItem = addButton
         if #available(iOS 16, *) {
             navigationItem.style = .navigator
@@ -37,15 +39,14 @@ class ReminderListViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let id = reminders[indexPath.item].id
-        showDetail(for: id)
+        pushDetailViewForReminder(withId: id)
         return false
     }
     
-    func showDetail(for id: Reminder.ID) {
-        let reminder = reminder(for: id)
-        let viewController = ReminderViewController(reminder: reminder) {
-            [weak self] reminder in
-            self?.update(reminder, with: reminder.id)
+    func pushDetailViewForReminder(withId id: Reminder.ID) {
+        let reminder = reminder(withId: id)
+        let viewController = ReminderViewController(reminder: reminder) { [weak self] reminder in
+            self?.updateReminder(reminder)
             self?.updateSnapshot(reloading: [reminder.id])
         }
         navigationController?.pushViewController(viewController, animated: true)

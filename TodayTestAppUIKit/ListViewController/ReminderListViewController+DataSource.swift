@@ -29,7 +29,7 @@ extension ReminderListViewController {
     }
     
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
-        let reminder = reminder(for: id)
+        let reminder = reminder(withId: id)
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
         contentConfiguration.secondaryText = reminder.dueDate.dayAndTimeText
@@ -47,10 +47,20 @@ extension ReminderListViewController {
         cell.backgroundConfiguration = backgroundConfiguration
     }
     
-    func completeReminder(with id: Reminder.ID) {
-        var reminder = reminder(for: id)
+    func reminder(withId id: Reminder.ID) -> Reminder {
+        let index = reminders.indexOfReminder(withId: id)
+        return reminders[index]
+    }
+
+    func updateReminder(_ reminder: Reminder) {
+        let index = reminders.indexOfReminder(withId: reminder.id)
+        reminders[index] = reminder
+    }
+    
+    func completeReminder(withId id: Reminder.ID) {
+        var reminder = reminder(withId: id)
         reminder.isComplete.toggle()
-        update(reminder, with: id)
+        updateReminder(reminder)
         updateSnapshot(reloading: [id])
     }
     
@@ -59,14 +69,14 @@ extension ReminderListViewController {
     }
     
     func deleteReminder(withId id: Reminder.ID) {
-        let index = reminders.indexOfReminder(with: id)
+        let index = reminders.indexOfReminder(withId: id)
         reminders.remove(at: index)
     }
     
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
         let name = NSLocalizedString("Toggle completion", comment: "Reminder done button accessibility label")
         let action = UIAccessibilityCustomAction(name: name) { [weak self] action in
-            self?.completeReminder(with: reminder.id)
+            self?.completeReminder(withId: reminder.id)
             return true
         }
         return action
@@ -81,15 +91,5 @@ extension ReminderListViewController {
         button.id = reminder.id
         button.setImage(image, for: .normal)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
-    }
-    
-    func reminder(for id: Reminder.ID) -> Reminder {
-        let index = reminders.indexOfReminder(with: id)
-        return reminders[index]
-    }
-    
-    func update(_ reminder: Reminder, with id: Reminder.ID) {
-        let index = reminders.indexOfReminder(with: id)
-        reminders[index] = reminder
     }
 }
