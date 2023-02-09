@@ -52,4 +52,11 @@ final class ReminderStore {
         }
         return reminders
     }
+    
+    private func read(with id: Reminder.ID) throws -> EKReminder {
+        guard let ekReminder = ekStore.calendarItem(withIdentifier: id) as? EKReminder else {
+            throw TodayError.failedReadingCalendarItem
+        }
+        return ekReminder
+    }
 }

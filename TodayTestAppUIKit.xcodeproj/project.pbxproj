@@ -35,6 +35,7 @@
 		95B64D982992E06400832C39 /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B64D972992E06400832C39 /* EKEventStore+AsyncFetch.swift */; };
 		95B64D9A299533AD00832C39 /* Reminder+EKReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B64D99299533AD00832C39 /* Reminder+EKReminder.swift */; };
 		95B64D9C2995355E00832C39 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B64D9B2995355E00832C39 /* ReminderStore.swift */; };
+		95B64D9E29955DA500832C39 /* EKReminder+Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B64D9D29955DA500832C39 /* EKReminder+Reminder.swift */; };
 		95BE1A65294F092B001EA47C /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE1A64294F092B001EA47C /* ReminderViewController+Section.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		95B64D972992E06400832C39 /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
 		95B64D99299533AD00832C39 /* Reminder+EKReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKReminder.swift"; sourceTree = "<group>"; };
 		95B64D9B2995355E00832C39 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		95B64D9D29955DA500832C39 /* EKReminder+Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKReminder+Reminder.swift"; sourceTree = "<group>"; };
 		95BE1A64294F092B001EA47C /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			children = (
 				95168A19292D668E00008F1B /* Reminder.swift */,
 				95B64D99299533AD00832C39 /* Reminder+EKReminder.swift */,
+				95B64D9D29955DA500832C39 /* EKReminder+Reminder.swift */,
 				95B64D9B2995355E00832C39 /* ReminderStore.swift */,
 				95B64D952992DFCA00832C39 /* TodayError.swift */,
 				95B64D972992E06400832C39 /* EKEventStore+AsyncFetch.swift */,
@@ -269,6 +272,7 @@
 				95B64D942992D86500832C39 /* CAGradientLayer+ListStyle.swift in Sources */,
 				9569A9F02937C9E3003CC009 /* ReminderListViewController+DataSource.swift in Sources */,
 				95B64D9C2995355E00832C39 /* ReminderStore.swift in Sources */,
+				95B64D9E29955DA500832C39 /* EKReminder+Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
